@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> {% endcomment %} -->
+    <title>LOGIN</title>
+    <style>
+        body{           
+            background-image: url("./static/pic1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .main{ 
+            margin-top:10%;
+        }
+        body{
+            font-family: sans-serif;
+            background-color:rgb(24,26,32);
+            
+        }
+        .main{
+            width:340px;
+            margin: 0 auto;
+            padding: 20px;
+        
+            border: 1px solid rgba(255, 255, 255, .25);
+            border-radius: 15px;
+            background-color: rgb(151 151 151 / 16%);
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(14px);
+        }
+        h1{
+            text-align: center;
+            color: white;
+        }
+        div{
+            border-radius:5px;
+        }
+        input{
+            padding:10px 0 10px 15px;
+            margin: 10px 0;
+            width: 95%;
+            color:white;
+            border: 1px solid rgba(255, 255, 255, .25);
+            border-radius: 10px;
+            background-color: rgb(151 151 151 / 16%);
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+        }
+        a{
+            display:inline-block;
+            color:rgb(194, 194, 201);
+            text-decoration: none;
+            font-size: smaller;
+        }
+        a:hover{
+            color: white;
+        }
+        #submit{
+            text-align: center;
+            text-decoration: none;
+            background-color: rgb(255,130,0);
+            border:none;
+            color:rgb(18,19,24);
+            padding:12px 0 12px 5px;
+            border-radius:20px;
+        }
+        #submit:hover{
+            background-color:rgb(255,130,0,0.5);
+        }
+        #submit_center{
+            padding-left:20%;
+        }
+        #submit{
+            width:100%;
+        }
+        p{
+            font-size:10px;
+            color:rgb(100, 100, 100);
+            display:inline-block;
+            
+        }
+        div .alert{
+            color : rgb(235, 52, 52);
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="main">
+        
+        <h1 id="hero">Welcome back,</h1>
+        <br>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" id="username" required placeholder="Enter your username">
+            <br>
+            <input type="password" name="password" id="password" required placeholder="Password">
+            <br>
+            <div id="submit_center">
+                <p>Don't have an account?</p>
+                <a href="/" id="signup">Sign up</a>
+            </div>
+            <br>
+            <input type="submit" name="login" value="Login" id="submit">
+        </form>
+    </div>    
+</body>
+</html>

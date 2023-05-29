@@ -31,6 +31,12 @@ def view(request):
 
 def edit(request):
     return render(request,'edit.html')
+
+def faq(request):
+    return render(request,'faq.html')
+    
+def pricing(request):
+    return render(request,'pricing.html')
     
 def contact(request):
     if (request.method == "POST"):
